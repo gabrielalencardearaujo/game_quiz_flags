@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Resultado</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../src/assets/css/style-result.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../src/assets/fontawesome/css/all.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../src/assets/img/3909370.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <section class="container">
+    <div class="score">
+      <h2>Sua pontuação! </h2>
+      <h1 class="pnts"></h1>
+      <button class="btn btn_back"><a href="./index.html">Tentar novamente</a></button>
+    </div>
+  </section>
+
+
+  <script>
+    const pntsElement = document.querySelector('.pnts')
+    const placaresJSON = JSON.parse(localStorage.getItem('Placar'))
+    const placarJogadorAtual = placaresJSON.find(value => {
+      return placaresJSON[0] === value.nome
+    });
+    pntsElement.textContent = placaresJSON[1]
+    
+  </script>
+
+</body>
+
+</html>

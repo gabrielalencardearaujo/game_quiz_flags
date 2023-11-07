@@ -1,0 +1,52 @@
+body, html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  max-width: 300px;
+  max-height: 600px;
+}
+
+h1{
+  padding-top: 40px;
+  color:black
+}
+
+.list_placar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 350px;
+  width: 95%;
+}
+
+.jogador{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
+  background-color: var(--primary-color-darker);
+  padding: 10px;
+  color: #fff;
+}
+
+.divBTN{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn{
+  margin: 0 auto;
+  font-size: 2em;
+  width: 200px;
+  font-weight: bold;
+  background-color: rgb(147, 218, 32);
+}
+
+.btn:hover{
+  background-color: rgb(75, 112, 16);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Placar</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/assets/css/style.css">
+  <link rel="stylesheet" href="../src/assets/css/style-placar.css">
+  
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../src/assets/fontawesome/css/all.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../src/assets/img/3909370.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <section class="container">
+    <h1>TOP 5:</h1>
+
+    <div class="list_placar">
+     
+    </div>
+
+    <div class="divBTN">
+      <button class="btn"><a href="./index.html">Voltar</a></button>
+    </div>
+  </section>
+
+  <script>
+    const listaPlacar = document.querySelector('.list_placar')
+    const placaresJSON = JSON.parse(localStorage.getItem('Placar'))
+    
+    const newPlacar = placaresJSON.sort((a, b) => {
+      return b.placar - a.placar
+    })
+
+    for(let i = 2; i < 7; i++){
+      listaPlacar.innerHTML += `
+      <div class="jogador" id="${i}">
+        <strong id="${newPlacar[i].nome}">${newPlacar[i].nome}</strong> 
+        <strong id="pnts">${newPlacar[i].placar} pts</strong>
+      </div>`
+    }
+    
+  </script>
+
+</body>
+
+</html>

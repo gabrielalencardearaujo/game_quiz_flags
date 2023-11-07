@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bandeiras renderizadas de todos os países em SVG e PNG</title>
+
+	<style type="text/css">
+		img {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+		$.getJSON( "paises.json", function( data ) {
+			var items = [];
+			$.each( data, function( key, val ) {
+				console.log(key, val);
+				items.push( "<li id='" + key + "'><img src='svg/" + val.iso.toLowerCase() + ".svg' title='"+val.nome+"'><img src='svg-basic/" + val.iso.toLowerCase() + ".svg' altsudo ='"+val.iso+"'></li>" );
+			});
+
+			$( "<ul/>", { html: items.join( "" ) }).appendTo( "body" );
+		});
+	</script>
+</body>
+</html>

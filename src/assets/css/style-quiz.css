@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+:root {
+  --primary-color: rgb(252, 252, 252);
+  --primary-color-darker: rgb(9, 48, 56);
+  --primary-color-text: #333333;
+  --secondary-color: rgb(7, 153, 250);
+  --font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background: var(--primary-color);
+  font-family: var(--font-family);
+  font-size: 1.3em;
+  line-height: 1.5em;
+  /* background: url('../img/all-national-flags-world-background-style_18981-512.avif'); */
+  background-size: cover;
+}
+
+.container2 {
+  width: 70vw;
+  min-width: 450px;
+  max-width: 550px;
+  min-height: 700px;
+  margin: 0 auto;
+  border-radius: 35px;
+  background: rgba(252, 252, 252, .8);
+  box-shadow: 16px 16px 32px rgba(0, 0, 0, 0.4)
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0px;
+  color: var(--primary-color-text);
+  letter-spacing: 0.05em;
+  padding: 3%;
+  font-size: 2em;
+  margin-top: 40px;
+}
+
+.bandeiraEscolhida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 280px;
+}
+
+.bandeiraEscolhida img {
+  max-width: 360px;
+  max-height: 360px;
+  border: 1px solid black;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.divAlternativas{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 250px;
+  margin: 10px 10px 50px 10px;
+}
+
+.alternativa{
+  font-size: 130%;
+  font-weight: 600;
+  height: 100%;
+  min-width: 100%;
+  max-width: 201px;
+  min-height: 123px;
+  max-height: 124px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  outline: 1px solid var(--primary-color-text);
+  overflow: hidden;
+
+}
+
+.alternativa:hover{
+  cursor: pointer;
+  font-size: 140%;
+  background-color: rgb(7, 92, 250);
+  transition: .3s;
+}
+
+.timer-lifes{
+  display: flex;
+  font-size: .7em;
+  justify-content: space-around;
+}
+
+#vidas{
+  color: red;
+}
+
+@media (max-width: 660px) {
+  .divButton {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+}
