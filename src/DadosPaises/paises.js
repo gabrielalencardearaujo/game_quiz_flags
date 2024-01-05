@@ -1,4 +1,4 @@
-[
+export const jsonCountries = [
     {"codigo": "004", "fone": "0093", "iso": "AF", "iso3": "AFG", "nome": "Afeganistão", "nomeFormal": "República Islâmica do Afeganistão"},
     {"codigo": "008", "fone": "0355", "iso": "AL", "iso3": "ALB", "nome": "Albânia", "nomeFormal": "República da Albânia"},
     {"codigo": "012", "fone": "0213", "iso": "DZ", "iso3": "DZA", "nome": "Algéria", "nomeFormal": "República Democrática Popular da Algéria"},

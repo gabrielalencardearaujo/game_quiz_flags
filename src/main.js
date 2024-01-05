@@ -1,7 +1,5 @@
-// import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-import './assets/css/style.css';
-const paisesCode = require('./DadosPaises/paises.json');
+
+import {jsonCountries as paisesCode} from './DadosPaises/paises.js';
 
 const bandeiraEscolhida = document.querySelector('.bandeiraEscolhida')
 const divAlternativas = document.querySelector('.divAlternativas')
